@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2024.2.1post4">
+<PsychoPy2experiment encoding="utf-8" version="2023.2.3">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -346,7 +346,7 @@
         <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="Noto Sans Mono" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
         <Param val="text_target" valType="code" updates="None" name="name"/>
@@ -819,8 +819,8 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="cue_3">
-      <RoutineSettingsComponent name="cue_3" plugin="None">
+    <Routine name="cue">
+      <RoutineSettingsComponent name="cue" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -829,7 +829,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="cue_3" valType="code" updates="None" name="name"/>
+        <Param val="cue" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
@@ -922,7 +922,7 @@
       <CodeComponent name="code_cue" plugin="None">
         <Param val="import numpy as np&amp;#10;from pylsl import StreamInfo, StreamOutlet&amp;#10;&amp;#10;# Setup LSL outlet&amp;#10;info = StreamInfo(&quot;Psychopy&quot;, &quot;Markers&quot;, 1, 0, &quot;string&quot;, &quot;PsychopyUUID0001&quot;)&amp;#10;outlet = StreamOutlet(info)&amp;#10;outlet.push_sample([&quot;before_experiment&quot;])" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="import * as np from 'numpy';&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="outlet.push_sample([f&quot;begin_experiment&quot;])&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="outlet.push_sample([f&quot;begin_experiment&quot;])" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="outlet.push_sample([f&quot;cue:{cue}&quot;])&amp;#10;if cue == &quot;NC&quot;:&amp;#10;    cue_pos1 = [0.0,  1.5]&amp;#10;    cue_pos2 = [0.0, -1.5]&amp;#10;elif cue == &quot;CC&quot;:&amp;#10;#    Position both cue texts at 0.0&amp;#10;    cue_pos1 = cue_pos2 = [0.0, 0.0]&amp;#10;elif cue == &quot;DC&quot;:&amp;#10;    cue_pos1 = [0.0,  .25]&amp;#10;    cue_pos2 = [0.0, -.25]&amp;#10;elif cue == &quot;SC&quot;:&amp;#10;    if np.random.rand() &gt;= 0.5:&amp;#10;        cue_pos1 = cue_pos2 = [0.0,  .25]&amp;#10;        outlet.push_sample([&quot;up&quot;])&amp;#10;    else:&amp;#10;        cue_pos1 = cue_pos2 = [0.0, -.25]&amp;#10;        outlet.push_sample([&quot;down&quot;])&amp;#10;text_1_cue.pos = cue_pos1&amp;#10;text_2_cue.pos = cue_pos2" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -979,7 +979,7 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Fix"/>
-    <Routine name="cue_3"/>
+    <Routine name="cue"/>
     <Routine name="Target"/>
     <LoopTerminator name="trials"/>
     <Routine name="block_end"/>
