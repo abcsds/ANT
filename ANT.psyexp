@@ -262,9 +262,9 @@
         <Param val="import * as random from 'random';&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="fix_duration = .400" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="fix_duration = 0.4;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="fix_duration = (0.4 + Math.random.uniform(0.0, 1.2));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="fix_duration = .400 + random.uniform(0.0, 1.2)" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="fix_duration = (0.4 + Math.random.uniform(0.0, 1.2));&amp;#10;outlet.push_sample([fix_duration]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="fix_duration = .400 + random.uniform(0.0, 1.2)&amp;#10;outlet.push_sample([f&quot;fix_duration:{fix_duration}&quot;])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
@@ -376,12 +376,12 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="code_cue" plugin="None">
-        <Param val="import numpy as np" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import numpy as np&amp;#10;from pylsl import StreamInfo, StreamOutlet&amp;#10;&amp;#10;# Setup LSL outlet&amp;#10;info = StreamInfo(&quot;Psychopy&quot;, &quot;Markers&quot;, 1, 0, &quot;string&quot;, &quot;PsychopyUUID0001&quot;)&amp;#10;outlet = StreamOutlet(info)&amp;#10;outlet.push_sample([&quot;before_experiment&quot;])" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="import * as np from 'numpy';&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="outlet.push_sample([f&quot;begin_experiment&quot;])&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if cue == &quot;NC&quot;:&amp;#10;    cue_pos1 = [0.0,  1.5] # hide Cue_text_1 &amp;#10;    cue_pos2 = [0.0, -1.5] # hide Cue_text_2&amp;#10;elif cue == &quot;CC&quot;:&amp;#10;#    Position both cue texts at 0.0&amp;#10;    cue_pos1 = cue_pos2 = [0.0, 0.0]&amp;#10;elif cue == &quot;DC&quot;:&amp;#10;    cue_pos1 = [0.0,  .25]&amp;#10;    cue_pos2 = [0.0, -.25]&amp;#10;elif cue == &quot;SC&quot;:&amp;#10;    if np.random.rand() &gt;= 0.5:&amp;#10;        cue_pos1 = cue_pos2 = [0.0,  .25]&amp;#10;    else:&amp;#10;        cue_pos1 = cue_pos2 = [0.0, -.25]&amp;#10;text_1_cue.pos = cue_pos1&amp;#10;text_2_cue.pos = cue_pos2" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="outlet.push_sample([f&quot;cue:{cue}&quot;])&amp;#10;if cue == &quot;NC&quot;:&amp;#10;    cue_pos1 = [0.0,  1.5] # hide Cue_text_1 &amp;#10;    cue_pos2 = [0.0, -1.5] # hide Cue_text_2&amp;#10;elif cue == &quot;CC&quot;:&amp;#10;#    Position both cue texts at 0.0&amp;#10;    cue_pos1 = cue_pos2 = [0.0, 0.0]&amp;#10;elif cue == &quot;DC&quot;:&amp;#10;    cue_pos1 = [0.0,  .25]&amp;#10;    cue_pos2 = [0.0, -.25]&amp;#10;elif cue == &quot;SC&quot;:&amp;#10;    if np.random.rand() &gt;= 0.5:&amp;#10;        cue_pos1 = cue_pos2 = [0.0,  .25]&amp;#10;        outlet.push_sample([&quot;up&quot;])&amp;#10;    else:&amp;#10;        cue_pos1 = cue_pos2 = [0.0, -.25]&amp;#10;        outlet.push_sample([&quot;down&quot;])&amp;#10;text_1_cue.pos = cue_pos1&amp;#10;text_2_cue.pos = cue_pos2" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -472,7 +472,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="Target_text.text = target;&amp;#10;if ((cue === &quot;SC&quot;)) {&amp;#10;    p = np.sign(cue_pos1[1]);&amp;#10;} else {&amp;#10;    p = np.random.choice([(- 1), 1]);&amp;#10;}&amp;#10;Target_text.set_pos([0.0, (p * 0.4)]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="text_target.text = target&amp;#10;if cue == &quot;SC&quot;:&amp;#10;    p = np.sign(cue_pos1[1])&amp;#10;else:&amp;#10;    p = np.random.choice([-1,1])&amp;#10;    &amp;#10;text_target.pos = [0.0, p*0.25]&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="outlet.push_sample([f&quot;target:{target}&quot;])&amp;#10;text_target.text = target&amp;#10;if cue == &quot;SC&quot;:&amp;#10;    p = np.sign(cue_pos1[1])&amp;#10;    outlet.push_sample([&quot;up&quot;])&amp;#10;else:&amp;#10;    p = np.random.choice([-1,1])&amp;#10;    outlet.push_sample([&quot;down&quot;])&amp;#10;text_target.pos = [0.0, p*0.25]&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
