@@ -26,16 +26,13 @@
     <Param val="True" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[1920, 1080]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1280, 1024]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
-    <Param val="float" valType="str" updates="None" name="clockFormat"/>
     <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
-    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
     <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
     <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
     <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
@@ -49,13 +46,10 @@
     <Param val="ANT" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
-    <Param val="" valType="code" updates="None" name="frameRate"/>
-    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="exp" valType="code" updates="None" name="logging level"/>
-    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
@@ -71,8 +65,6 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
-    <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
     <Param val="" valType="str" updates="None" name="tbModel"/>
@@ -103,7 +95,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -122,13 +113,11 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Te damos la bienvenida.&amp;#10;&amp;#10;En seguida te presentaremos un questionario y una tarea de tiempos de reacción. &amp;#10;&amp;#10;[Presiona la barra espaciadora para continuar...]" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_welcome" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -168,7 +157,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -187,13 +175,11 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Tarea ANT:&amp;#10;Coloca tus dedos indices en las teclas F y J del teclado.&amp;#10;Presiona la tecla correspondiente a la direccion de la flecha central.&amp;#10;Ignora los distractores.&amp;#10;&amp;#10;Si la flecha central apunta a la derecha &gt;:&amp;#10;&gt;&gt;&gt;&gt;&gt; Presiona J &lt;&lt;&gt;&lt;&lt;&amp;#10; &amp;#10;Si la flecha central apunta a la izquierda &lt;:&amp;#10;&lt;&lt;&lt;&lt;&lt; Presiona F &gt;&gt;&lt;&gt;&gt;&amp;#10;&amp;#10;[Presiona barra espaciadora para continuar...]" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_intro" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -250,7 +236,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="white" valType="color" updates="constant" name="fillColor"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
@@ -271,7 +256,6 @@
         <Param val="$fix_duration" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
       <CodeComponent name="code_fix" plugin="None">
@@ -314,7 +298,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="white" valType="color" updates="constant" name="fillColor"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
@@ -335,7 +318,6 @@
         <Param val="1.7" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
       <TextComponent name="text_target" plugin="None">
@@ -343,7 +325,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Noto Sans Mono" valType="str" updates="constant" name="font"/>
@@ -362,7 +343,6 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="&gt;&gt;&gt;&gt;&gt;" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="code_target" plugin="None">
@@ -385,7 +365,6 @@
       <KeyboardComponent name="key_resp_target" plugin="None">
         <Param val="'f', 'j'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -472,7 +451,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -491,7 +469,6 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Este es el fin de la prueba.&amp;#10;&amp;#10;¡Gracias por participar!" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -517,7 +494,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -536,13 +512,11 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Ahora te presentaremos una encuesta relacionada a atencion.&amp;#10;Ésta consta de 39 preguntas.&amp;#10;&amp;#10;Elije la alternativa que mejor refleje el grado en que estás de acuerdo con cada uno de los enunciados que se indican a continuación. Cuando estés listo/a presiona la barra espaciadora para continuar." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp__intro_ffmq" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -612,14 +586,12 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="(1, 2, 3, 4, 5)" valType="list" updates="constant" name="ticks"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
       </SliderComponent>
       <TextComponent name="text_ffmq" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -636,15 +608,13 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$f&quot;{question_number}: {question_text}&quot;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$f&quot;{int(question_number)}: {question_text}&quot;" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_ffmq" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -666,7 +636,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -685,7 +654,6 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="[Presiona la barra espaciadora para continuar...]" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -711,7 +679,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -730,13 +697,11 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Hasta aquí llega el cuestionario. En seguida te pediremos que realices una tarea.&amp;#10;&amp;#10;[Presiona la barra espaciadora para continuar...]" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_end_ffmq" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -776,7 +741,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -795,13 +759,11 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$f&quot;&quot;&quot;Este es el final del bloque {blocks.thisN+1}.&amp;#10;&amp;#10;Puedes tomar una pausa.&amp;#10;&amp;#10;[Presiona barra espaciadora para continuar...]&amp;#10;&quot;&quot;&quot;" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_block_end" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -841,7 +803,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="white" valType="color" updates="constant" name="fillColor"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
@@ -862,7 +823,6 @@
         <Param val=".4" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
       <TextComponent name="text_1_cue" plugin="None">
@@ -870,7 +830,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -889,7 +848,6 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="*" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="text_2_cue" plugin="None">
@@ -897,7 +855,6 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -916,7 +873,6 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="*" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="code_cue" plugin="None">
@@ -943,7 +899,7 @@
     <Routine name="Intro_FFMQ"/>
     <LoopInitiator loopType="TrialHandler" name="trials_ffmq">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('question_number', 1), ('question_text', 'Cuando camino noto deliberadamente las sensaciones de mi cuerpo al moverse.')]), OrderedDict([('question_number', 2), ('question_text', 'Se me da bien encontrar las palabras para describir mis sentimientos.')]), OrderedDict([('question_number', 3), ('question_text', 'Me critico a mi mismo/a por tener emociones irracionales o inapropiadas.')]), OrderedDict([('question_number', 4), ('question_text', 'Percibo mis sentimientos y emociones sin tener que reaccionar a ellos.')]), OrderedDict([('question_number', 5), ('question_text', 'Cuando hago algo mi mente divaga y me distraigo fácilmente.')]), OrderedDict([('question_number', 6), ('question_text', 'Cuando me ducho o me baño estoy atento a las sensaciones del agua en mi cuerpo.')]), OrderedDict([('question_number', 7), ('question_text', 'Con facilidad puedo poner en palabras mis creencias sentimientos y expectativas.')]), OrderedDict([('question_number', 8), ('question_text', 'No presto atención a lo que hago porque sueño despierto porque me preocupo o porque me distraigo.')]), OrderedDict([('question_number', 9), ('question_text', 'Observo mis sentimientos sin perderme en ellos.')]), OrderedDict([('question_number', 10), ('question_text', 'Me digo a mi mismo/a que no debería sentir lo que siento.')]), OrderedDict([('question_number', 11), ('question_text', 'Noto cómo los alimentos y las bebidas afectan a mis pensamientos sensaciones corporales y emociones.')]), OrderedDict([('question_number', 12), ('question_text', 'Me es difícil encontrar palabras para describir lo que siento.')]), OrderedDict([('question_number', 13), ('question_text', 'Me distraigo fácilmente.')]), OrderedDict([('question_number', 14), ('question_text', 'Creo que algunos de mis pensamientos no son normales o son malos y que no debería pensar así.')]), OrderedDict([('question_number', 15), ('question_text', 'Presto atención a las sensaciones que produce el viento en el pelo o el sol en la cara.')]), OrderedDict([('question_number', 16), ('question_text', 'Tengo problemas para pensar en las palabras que expresan correctamente cómo me siento.')]), OrderedDict([('question_number', 17), ('question_text', 'Hago juicios sobre si mis pensamientos son buenos o malos.')]), OrderedDict([('question_number', 18), ('question_text', 'Me es difícil permanecer centrado/a en lo que esta sucediendo en el presente.')]), OrderedDict([('question_number', 19), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras soy capaz de dar un paso atrás y me doy cuenta del pensamiento o la imagen sin que me atrape.')]), OrderedDict([('question_number', 20), ('question_text', 'Presto atención a sonidos como el tic-tac del reloj el gorjeo de los pájaros o los coches que pasan.')]), OrderedDict([('question_number', 21), ('question_text', 'En situaciones difíciles puedo parar sin reaccionar inmediatamente.')]), OrderedDict([('question_number', 22), ('question_text', 'Cuando tengo sensaciones en el cuerpo es difícil para mí describirlas porque no puedo encontrar las palabras adecuadas.')]), OrderedDict([('question_number', 23), ('question_text', 'Conduzco en “piloto automático” sin prestar atención a lo que hago. ')]), OrderedDict([('question_number', 24), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras me calmo en poco tiempo.')]), OrderedDict([('question_number', 25), ('question_text', 'Me digo a mi mismo/a que no debería pensar como pienso.')]), OrderedDict([('question_number', 26), ('question_text', 'Percibo el olor y el aroma de las cosas.')]), OrderedDict([('question_number', 27), ('question_text', 'Incluso cuando estoy muy enfadado encuentro una forma de expresarlo con palabras.')]), OrderedDict([('question_number', 28), ('question_text', 'Hago actividades precipitadamente sin estar de verdad atento/a a ellas.')]), OrderedDict([('question_number', 29), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras soy capaz de notarlas sin reaccionar.')]), OrderedDict([('question_number', 30), ('question_text', 'Creo que algunas de mis emociones son malas o inapropiadas y que no debería sentirlas.')]), OrderedDict([('question_number', 31), ('question_text', 'Percibo elementos visuales en la naturaleza o en el arte como colores formas texturas o patrones de luces y sombras.')]), OrderedDict([('question_number', 32), ('question_text', 'Mi tendencia natural es poner mis experiencias en palabras.')]), OrderedDict([('question_number', 33), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras las noto y las dejo marchar.')]), OrderedDict([('question_number', 34), ('question_text', 'Hago tareas automáticamente sin ser consciente de lo que hago.')]), OrderedDict([('question_number', 35), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras me juzgo como bueno o malo dependiendo del contenido.')]), OrderedDict([('question_number', 36), ('question_text', 'Presto atención a cómo mis emociones afectan a mis pensamientos y a mi conducta.')]), OrderedDict([('question_number', 37), ('question_text', 'Normalmente puedo describir como me siento con considerable detalle.')]), OrderedDict([('question_number', 38), ('question_text', 'Me sorprendo haciendo cosas sin prestar atención.')]), OrderedDict([('question_number', 39), ('question_text', 'Me critico cuando tengo ideas irracionales.')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('question_number', '1,&quot;Cuando camino noto deliberadamente las sensaciones de mi cuerpo al moverse.'), ('question_text', None)]), OrderedDict([('question_number', '2,&quot;Se me da bien encontrar las palabras para describir mis sentimientos.'), ('question_text', None)]), OrderedDict([('question_number', '3,&quot;Me critico a mi mismo/a por tener emociones irracionales o inapropiadas.'), ('question_text', None)]), OrderedDict([('question_number', '4,&quot;Percibo mis sentimientos y emociones sin tener que reaccionar a ellos.'), ('question_text', None)]), OrderedDict([('question_number', '5,&quot;Cuando hago algo mi mente divaga y me distraigo fácilmente.'), ('question_text', None)]), OrderedDict([('question_number', '6,&quot;Cuando me ducho o me baño estoy atento a las sensaciones del agua en mi cuerpo.'), ('question_text', None)]), OrderedDict([('question_number', '7,&quot;Con facilidad puedo poner en palabras mis creencias sentimientos y expectativas.'), ('question_text', None)]), OrderedDict([('question_number', '8,&quot;No presto atención a lo que hago porque sueño despierto porque me preocupo o porque me distraigo.'), ('question_text', None)]), OrderedDict([('question_number', '9,&quot;Observo mis sentimientos sin perderme en ellos.'), ('question_text', None)]), OrderedDict([('question_number', 10.0), ('question_text', 'Me digo a mi mismo/a que no debería sentir lo que siento.')]), OrderedDict([('question_number', 11.0), ('question_text', 'Noto cómo los alimentos y las bebidas afectan a mis pensamientos sensaciones corporales y emociones.')]), OrderedDict([('question_number', 12.0), ('question_text', 'Me es difícil encontrar palabras para describir lo que siento.')]), OrderedDict([('question_number', 13.0), ('question_text', 'Me distraigo fácilmente.')]), OrderedDict([('question_number', 14.0), ('question_text', 'Creo que algunos de mis pensamientos no son normales o son malos y que no debería pensar así.')]), OrderedDict([('question_number', 15.0), ('question_text', 'Presto atención a las sensaciones que produce el viento en el pelo o el sol en la cara.')]), OrderedDict([('question_number', 16.0), ('question_text', 'Tengo problemas para pensar en las palabras que expresan correctamente cómo me siento.')]), OrderedDict([('question_number', 17.0), ('question_text', 'Hago juicios sobre si mis pensamientos son buenos o malos.')]), OrderedDict([('question_number', 18.0), ('question_text', 'Me es difícil permanecer centrado/a en lo que esta sucediendo en el presente.')]), OrderedDict([('question_number', 19.0), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras soy capaz de dar un paso atrás y me doy cuenta del pensamiento o la imagen sin que me atrape.')]), OrderedDict([('question_number', 20.0), ('question_text', 'Presto atención a sonidos como el tic-tac del reloj el gorjeo de los pájaros o los coches que pasan.')]), OrderedDict([('question_number', 21.0), ('question_text', 'En situaciones difíciles puedo parar sin reaccionar inmediatamente.')]), OrderedDict([('question_number', 22.0), ('question_text', 'Cuando tengo sensaciones en el cuerpo es difícil para mí describirlas porque no puedo encontrar las palabras adecuadas.')]), OrderedDict([('question_number', 23.0), ('question_text', 'Conduzco en “piloto automático” sin prestar atención a lo que hago. ')]), OrderedDict([('question_number', 24.0), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras me calmo en poco tiempo.')]), OrderedDict([('question_number', 25.0), ('question_text', 'Me digo a mi mismo/a que no debería pensar como pienso.')]), OrderedDict([('question_number', 26.0), ('question_text', 'Percibo el olor y el aroma de las cosas.')]), OrderedDict([('question_number', 27.0), ('question_text', 'Incluso cuando estoy muy enfadado encuentro una forma de expresarlo con palabras.')]), OrderedDict([('question_number', 28.0), ('question_text', 'Hago actividades precipitadamente sin estar de verdad atento/a a ellas.')]), OrderedDict([('question_number', 29.0), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras soy capaz de notarlas sin reaccionar.')]), OrderedDict([('question_number', 30.0), ('question_text', 'Creo que algunas de mis emociones son malas o inapropiadas y que no debería sentirlas.')]), OrderedDict([('question_number', 31.0), ('question_text', 'Percibo elementos visuales en la naturaleza o en el arte como colores formas texturas o patrones de luces y sombras.')]), OrderedDict([('question_number', 32.0), ('question_text', 'Mi tendencia natural es poner mis experiencias en palabras.')]), OrderedDict([('question_number', 33.0), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras las noto y las dejo marchar.')]), OrderedDict([('question_number', 34.0), ('question_text', 'Hago tareas automáticamente sin ser consciente de lo que hago.')]), OrderedDict([('question_number', 35.0), ('question_text', 'Cuando tengo pensamientos o imágenes perturbadoras me juzgo como bueno o malo dependiendo del contenido.')]), OrderedDict([('question_number', 36.0), ('question_text', 'Presto atención a cómo mis emociones afectan a mis pensamientos y a mi conducta.')]), OrderedDict([('question_number', 37.0), ('question_text', 'Normalmente puedo describir como me siento con considerable detalle.')]), OrderedDict([('question_number', 38.0), ('question_text', 'Me sorprendo haciendo cosas sin prestar atención.')]), OrderedDict([('question_number', 39.0), ('question_text', 'Me critico cuando tengo ideas irracionales.')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="Lists/ffmq.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
