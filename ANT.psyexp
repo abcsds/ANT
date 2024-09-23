@@ -768,6 +768,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="code_block_end" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((blocks.thisN === 2)) {&amp;#10;    text_block_end.text = `Este es el final del bloque ${(blocks.thisN + 1)}.&amp;#10;&amp;#10;Hasta aquí llega la prueba.&amp;#10;&amp;#10;[Presiona barra espaciadora para continuar...]`&amp;#10;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if blocks.thisN == 2:&amp;#10;    text_block_end.text = f&quot;&quot;&quot;Este es el final del bloque {blocks.thisN+1}.&amp;#10;&amp;#10;Hasta aquí llega la prueba.&amp;#10;&amp;#10;[Presiona barra espaciadora para continuar...]&amp;#10;&quot;&quot;&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_block_end" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="cue">
       <RoutineSettingsComponent name="cue" plugin="None">
