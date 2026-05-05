@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ANT participant reports</title>
+<style>
+:root {
+  --ink: #2c3e50;
+  --muted: #7f8c8d;
+  --line: #ecf0f1;
+  --card: #ffffff;
+  --bg: #fafbfc;
+  --accent: #3498db;
+  --warn: #e74c3c;
+  --pass: #27ae60;
+  --fail: #c0392b;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+.wrap { max-width: 1200px; margin: 0 auto; padding: 1.5em 1em 4em; }
+h1 { margin: 0 0 0.2em; font-weight: 600; letter-spacing: -0.01em; }
+h2 { margin: 1.6em 0 0.6em; font-weight: 600; letter-spacing: -0.005em; }
+h3 { margin: 0 0 0.5em; font-weight: 600; }
+.meta { color: var(--muted); font-size: 0.9em; margin: 0 0 1.5em; }
+.kv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6em 1.2em;
+  margin: 0.8em 0 1.2em;
+}
+.kv > div { font-size: 0.9em; }
+.kv .label { display: block; color: var(--muted); font-size: 0.78em;
+             text-transform: uppercase; letter-spacing: 0.06em; }
+.kv .value { font-weight: 600; font-size: 1.05em; color: var(--ink); }
+.tab-bar {
+  display: flex; gap: 4px; border-bottom: 2px solid var(--line);
+  margin: 1em 0 1.4em; flex-wrap: wrap;
+}
+.tab-button {
+  padding: 10px 20px; border: none; background: none;
+  cursor: pointer; font-size: 14px; color: var(--muted);
+  border-radius: 4px 4px 0 0; font-family: inherit;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+}
+.tab-button:hover { background: var(--line); color: var(--ink); }
+.tab-button.active {
+  background: var(--card); color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 1.1em 1.2em; margin-bottom: 1em;
+}
+.summary {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1em; align-items: start;
+}
+@media (max-width: 800px) { .summary { grid-template-columns: 1fr; } }
+.score-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8em;
+  margin: 0.5em 0 1em;
+}
+@media (max-width: 700px) { .score-cards { grid-template-columns: 1fr; } }
+.score-card {
+  padding: 0.9em 1em; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--card);
+}
+.score-card .name {
+  font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); margin-bottom: 0.3em;
+}
+.score-card .value {
+  font-size: 1.7em; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.score-card .value-sd {
+  font-size: 0.5em; font-weight: 500; color: var(--muted);
+  margin-left: 0.3em; letter-spacing: 0.01em;
+}
+.score-card .ci {
+  font-size: 0.78em; color: var(--muted); margin-top: 0.15em;
+  font-variant-numeric: tabular-nums;
+}
+.score-card .formula { font-size: 0.75em; color: var(--muted); margin-top: 0.3em; }
+.score-card .ref { font-size: 0.75em; color: var(--muted); margin-top: 0.3em; }
+table.report {
+  border-collapse: collapse; width: 100%; font-size: 0.92em;
+}
+table.report th, table.report td {
+  padding: 0.45em 0.7em; border-bottom: 1px solid var(--line); text-align: left;
+}
+table.report th {
+  background: var(--bg); color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75em;
+}
+table.report tbody tr:hover { background: var(--bg); }
+table.report .num { text-align: right; font-variant-numeric: tabular-nums; }
+.block-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 600; font-size: 0.95em;
+  padding: 0.15em 0.55em; border-radius: 6px; background: var(--bg);
+}
+.legend { font-size: 0.85em; color: var(--muted); margin: 0.4em 0 0.8em;
+          display: flex; flex-wrap: wrap; gap: 0.8em; }
+.legend .swatch { display: inline-block; width: 12px; height: 12px;
+                  border-radius: 3px; vertical-align: middle; margin-right: 4px; }
+.score-pill {
+  display: inline-block; padding: 0.05em 0.5em; border-radius: 999px;
+  font-size: 0.78em; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.back-link { font-size: 0.9em; }
+.back-link a { color: var(--accent); text-decoration: none; }
+.back-link a:hover { text-decoration: underline; }
+.cue-chip {
+  display: inline-block; padding: 0.05em 0.45em; border-radius: 5px;
+  font-size: 0.8em; color: white; font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.note { color: var(--muted); font-size: 0.85em; }
+hr { border: none; border-top: 1px solid var(--line); margin: 1.5em 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ANT participant reports</h1>
+  <p class="meta">3 run(s) &middot;
+    <a href="report.html" style="color:var(--accent)">prerandomization report &rarr;</a>
+  </p>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="report">
+      <thead><tr>
+        <th>Participant</th><th>Session</th><th>Date</th>
+        <th class="num">Duration</th>
+        <th class="num">Blocks</th>
+        <th class="num">Accuracy</th>
+        <th class="num" style="color:#1abc9c">Alerting</th>
+        <th class="num" style="color:#f39c12">Orienting</th>
+        <th class="num" style="color:#c0392b">Conflict</th>
+        <th></th>
+      </tr></thead>
+      <tbody><tr><td><a href="reports/pilot_ANT_2026-05-05_10h44.31.827.html" style="color:var(--accent);text-decoration:none">pilot</a></td><td>001</td><td>2026-05-05_10h44.37.285</td><td class="num">4m 01s</td><td class="num">1</td><td class="num">95.0%</td><td class="num"><span class="score-pill" style="background:#1abc9c22;color:#1abc9c;">+10 ms</span></td><td class="num"><span class="score-pill" style="background:#f39c1222;color:#f39c12;">+63 ms</span></td><td class="num"><span class="score-pill" style="background:#c0392b22;color:#c0392b;">+62 ms</span></td><td><a href="reports/pilot_ANT_2026-05-05_10h44.31.827.html" style="color:var(--accent);text-decoration:none">open &rarr;</a></td></tr><tr><td><a href="reports/pilot_ANT_2026-05-05_10h35.13.616.html" style="color:var(--accent);text-decoration:none">pilot</a></td><td>001</td><td>2026-05-05_10h35.20.089</td><td class="num">1m 59s</td><td class="num">1</td><td class="num">5.0%</td><td class="num"><span class="score-pill" style="background:#1abc9c22;color:#1abc9c;">—</span></td><td class="num"><span class="score-pill" style="background:#f39c1222;color:#f39c12;">—</span></td><td class="num"><span class="score-pill" style="background:#c0392b22;color:#c0392b;">—</span></td><td><a href="reports/pilot_ANT_2026-05-05_10h35.13.616.html" style="color:var(--accent);text-decoration:none">open &rarr;</a></td></tr><tr><td><a href="reports/pilot_ANT_2026-05-05_10h18.16.019.html" style="color:var(--accent);text-decoration:none">pilot</a></td><td>001</td><td>2026-05-05_10h18.22.307</td><td class="num">3m 44s</td><td class="num">1</td><td class="num">1.7%</td><td class="num"><span class="score-pill" style="background:#1abc9c22;color:#1abc9c;">—</span></td><td class="num"><span class="score-pill" style="background:#f39c1222;color:#f39c12;">—</span></td><td class="num"><span class="score-pill" style="background:#c0392b22;color:#c0392b;">—</span></td><td><a href="reports/pilot_ANT_2026-05-05_10h18.16.019.html" style="color:var(--accent);text-decoration:none">open &rarr;</a></td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer style="text-align:center;color:var(--muted);font-size:0.8em;padding:2em 1em">
+Index updated 2026-05-05T11:23:14+02:00
+</footer>
+</body>
+</html>

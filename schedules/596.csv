@@ -1,0 +1,11 @@
+block,list_letter,condsFile
+1,f,lists/block_f.csv
+2,a,lists/block_a.csv
+3,c,lists/block_c.csv
+4,d,lists/block_d.csv
+5,b,lists/block_b.csv
+6,g,lists/block_g.csv
+7,h,lists/block_h.csv
+8,j,lists/block_j.csv
+9,i,lists/block_i.csv
+10,e,lists/block_e.csv
